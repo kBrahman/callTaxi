@@ -67,7 +67,6 @@ class TaxiService : Service() {
 
 
     override fun onDestroy() {
-        Log.i(TAG, "onDestroy")
         (getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager)
                 .cancel(NOTIFICATION_ID)
         manager.stopSendingLocation = true

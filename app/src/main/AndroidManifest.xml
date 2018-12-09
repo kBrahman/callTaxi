@@ -23,7 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.DriverActivity"/>
+        <activity android:name=".activity.DriverActivity"
+            />
 
         <service android:name=".service.TaxiService"/>
         <activity android:name=".activity.PassengerActivity"/>

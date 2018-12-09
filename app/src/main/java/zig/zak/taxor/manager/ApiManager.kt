@@ -1,5 +1,6 @@
 package zig.zak.taxor.manager
 
+import android.content.res.TypedArray
 import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Callback
