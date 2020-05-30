@@ -1,7 +1,7 @@
 package zig.zak.taxor.fragment
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.util.Log
 import android.view.*
 import android.widget.Toast
@@ -37,15 +37,15 @@ class TaxistFragment : Fragment() {
         rv.setHasFixedSize(true)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater?.inflate(R.menu.menu_taxist_list, menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        passengerPrgrBar.visibility = View.VISIBLE
-        listTaxists()
-        return true
-    }
+//    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+//        inflater?.inflate(R.menu.menu_pass, menu)
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+//        passengerPrgrBar.visibility = View.VISIBLE
+//        listTaxists()
+//        return true
+//    }
 
     private fun listTaxists() {
         LocationManager(activity!!).getMyCoords(OnSuccessListener {

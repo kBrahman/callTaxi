@@ -43,16 +43,16 @@ class TaxMapFragment : SupportMapFragment() {
         getMapAsync { listTaxists(it) }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater?.inflate(R.menu.menu_taxist_list, menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        this@TaxMapFragment.zoomLvl = map?.cameraPosition?.zoom
-        map?.clear()
-        getMapAsync { listTaxists(it) }
-        return true
-    }
+//    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+//        inflater?.inflate(R.menu.menu_pass, menu)
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+//        this@TaxMapFragment.zoomLvl = map?.cameraPosition?.zoom
+//        map?.clear()
+//        getMapAsync { listTaxists(it) }
+//        return true
+//    }
 
     private fun listTaxists(map: GoogleMap) {
         LocationManager(activity!!).getMyCoords(OnSuccessListener {

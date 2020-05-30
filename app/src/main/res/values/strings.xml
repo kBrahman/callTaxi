@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Taxor</string>
     <string name="who_are_you">You are a:</string>
     <string name="taxi_driver">Taxi driver</string>
     <string name="passenger">Passenger</string>

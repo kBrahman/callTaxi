@@ -8,15 +8,16 @@ import android.content.IntentFilter
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.provider.ContactsContract
-import android.support.v4.app.ActivityCompat
-import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
-import kotlinx.android.synthetic.main.driver.*
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import com.google.android.gms.ads.AdRequest
+import kotlinx.android.synthetic.main.activity_driver.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -90,7 +91,6 @@ class DriverActivity : AppCompatActivity() {
     }
 
     override fun onStop() {
-        Log.i(TAG, "onStop")
         if (!didExit) {
             val intent = Intent(this, TaxiService::class.java)
             intent.putExtra(ContactsContract.Intents.Insert.NAME, taxist?.name)
@@ -126,11 +126,11 @@ class DriverActivity : AppCompatActivity() {
                 }
 
                 override fun onResponse(call: Call<Boolean>, response: Response<Boolean>) {
-                    Log.i(TAG, "onResponse")
                     if (response.body()!!) {
                         setTitle(R.string.working)
-                        setContentView(R.layout.driver)
+                        setContentView(R.layout.activity_driver)
                         prgrBar.visibility = View.GONE
+                        recBanner.loadAd(AdRequest.Builder().build())
                     } else {
                         Toast.makeText(this@DriverActivity, R.string.try_later, Toast.LENGTH_LONG).show()
                     }

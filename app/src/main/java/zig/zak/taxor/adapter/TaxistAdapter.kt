@@ -3,7 +3,7 @@ package zig.zak.taxor.adapter
 import android.content.Intent
 import android.location.Location
 import android.net.Uri
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +12,7 @@ import zig.zak.taxor.R
 import zig.zak.taxor.model.Taxist
 import kotlin.math.roundToInt
 
-class TaxistAdapter(private val list: List<Taxist>, private val latitude: Double, private val longitude: Double) : RecyclerView.Adapter<TaxistAdapter.VH>() {
+class TaxistAdapter(private val list: List<Taxist>, private val latitude: Double, private val longitude: Double) : androidx.recyclerview.widget.RecyclerView.Adapter<TaxistAdapter.VH>() {
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int) = VH(LayoutInflater.from(p0.context).inflate(R.layout.taxist_item, p0, false))
 
@@ -37,7 +37,7 @@ class TaxistAdapter(private val list: List<Taxist>, private val latitude: Double
         return if (d < 10000) "${d.roundToInt()} m" else "%.1f km".format(d / 1000)
     }
 
-    class VH(view: View) : RecyclerView.ViewHolder(view) {
+    class VH(view: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view) {
 
         lateinit var phone: String
 

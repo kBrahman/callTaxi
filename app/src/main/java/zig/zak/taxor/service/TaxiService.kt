@@ -10,7 +10,7 @@ import android.content.Intent
 import android.os.Build
 import android.provider.CalendarContract.Calendars.NAME
 import android.provider.ContactsContract.Intents.Insert.PHONE
-import android.support.v4.app.NotificationCompat
+import androidx.core.app.NotificationCompat
 import android.util.Log
 import zig.zak.taxor.R
 import zig.zak.taxor.activity.DriverActivity

@@ -4,8 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import zig.zak.taxor.R
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         private val TAG: String = MainActivity::class.java.simpleName
         private const val TAXI_DRIVER = "taxi_driver"
         private const val WHO = "who"
-        private const val PASSENGER = "passenger"
+        private const val PASSENGER = "activity_passenger"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,14 +38,13 @@ class MainActivity : AppCompatActivity() {
     private fun init() {
         Log.i(TAG, "init")
         val sharedPreferences = getSharedPreferences("$packageName.$TAXOR", Context.MODE_PRIVATE)
-        val who = sharedPreferences.getString(WHO, null)
-        when (who) {
+        when (sharedPreferences.getString(WHO, null)) {
             null -> AlertDialog.Builder(this).setMessage(R.string.who_are_you)
                     .setPositiveButton(R.string.taxi_driver) { _, _ ->
                         startActivity(Intent(this, DriverActivity::class.java))
                         sharedPreferences.edit().putString(WHO, TAXI_DRIVER).apply()
                     }.setNegativeButton(R.string.passenger) { _, _ ->
-                        Log.i(TAG,"start passenger Activity")
+                        Log.i(TAG,"start activity_passenger Activity")
                         startActivity(Intent(this, PassengerActivity::class.java))
                         sharedPreferences.edit().putString(WHO, PASSENGER).apply()
                     }

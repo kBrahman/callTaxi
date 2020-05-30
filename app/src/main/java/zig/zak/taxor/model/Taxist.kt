@@ -1,6 +1,6 @@
 package zig.zak.taxor.model
 
-import android.support.annotation.Keep
+import androidx.annotation.Keep
 
 @Keep
 class Taxist(val name: String?, val phone: String?) {

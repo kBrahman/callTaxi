@@ -30,12 +30,11 @@ class LocationManager(private val ctx: Context) {
     }
 
 
-    @SuppressLint("MissingPermission")
-    fun sendCoords() = FusedLocationProviderClient(ctx).lastLocation.addOnSuccessListener {
-        val latitude = it.latitude
-        val longitude = it.longitude
-        Log.i(TAG, "lat=>$latitude, long=>$longitude")
-        ApiManager().sendCoords(taxist?.phone, latitude, longitude)
+    private fun sendCoords() = FusedLocationProviderClient(ctx).lastLocation.addOnSuccessListener {
+        val latitude = it?.latitude
+        val longitude = it?.longitude
+        Log.i(TAG, "loc=>$it")
+//        ApiManager().sendCoords(taxist?.phone, latitude, longitude)
     }.addOnFailureListener {
         it.printStackTrace()
     }
