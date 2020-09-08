@@ -10,9 +10,10 @@ import retrofit2.http.POST
 import zig.zak.taxor.BuildConfig
 import zig.zak.taxor.model.Taxist
 import java.util.concurrent.TimeUnit
+import javax.inject.Inject
 
 
-class ApiManager {
+class ApiManager @Inject constructor() {
 
     companion object {
         private val TAG: String = ApiManager::class.java.simpleName

@@ -4,21 +4,19 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.NotificationManager.IMPORTANCE_DEFAULT
 import android.app.PendingIntent
-import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import android.provider.CalendarContract.Calendars.NAME
-import android.provider.ContactsContract.Intents.Insert.PHONE
-import androidx.core.app.NotificationCompat
 import android.util.Log
+import androidx.core.app.NotificationCompat
+import dagger.android.DaggerService
 import zig.zak.taxor.R
 import zig.zak.taxor.activity.DriverActivity
 import zig.zak.taxor.manager.LocationManager
-import zig.zak.taxor.model.Taxist
 import zig.zak.taxor.receiver.StopServiceReceiver
+import javax.inject.Inject
 
-class TaxiService : Service() {
+class TaxiService : DaggerService() {
 
     companion object {
         private val TAG: String = TaxiService::class.java.simpleName
@@ -27,7 +25,8 @@ class TaxiService : Service() {
         private const val CHANNEL_ID = "Taxor_channel"
     }
 
-    private lateinit var manager: LocationManager
+    @Inject
+    lateinit var manager: LocationManager
 
     override fun onBind(intent: Intent?) = null
 
@@ -59,8 +58,7 @@ class TaxiService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        Log.i(TAG,"onStart")
-        manager = LocationManager(this, Taxist(intent?.getStringExtra(NAME), intent?.getStringExtra(PHONE)))
+        Log.i(TAG, "onStart")
         manager.sendLocation()
         return START_STICKY
     }

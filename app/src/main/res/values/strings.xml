@@ -19,4 +19,9 @@
     <string name="closest">Closest</string>
     <string name="taxists">Drivers</string>
     <string name="on_map">on map</string>
+    <string name="detection">Detecting your location</string>
+    <string name="need_loc_perm">You can\'t use this app without location permission granted</string>
+    <string name="grant_permission">Grant permission</string>
+    <string name="exit">Exit</string>
+    <string name="locate">Pick your place</string>
 </resources>
