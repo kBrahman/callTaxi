@@ -40,14 +40,18 @@ class MainActivity : DaggerActivity() {
             setTitle(R.string.network_error)
             setContentView(R.layout.activity_no_net)
         } else {
-            val permissions = arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION)
-            if (permissionsOk(this, permissions)) {
-                detectLocation()
-            } else {
-                ActivityCompat.requestPermissions(this, permissions, REQUEST_CODE_LOCATION_PERMISSION)
-            }
+            requestPermission()
         }
 
+    }
+
+    private fun requestPermission() {
+        val permissions = arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION)
+        if (permissionsOk(this, permissions)) {
+            detectLocation()
+        } else {
+            ActivityCompat.requestPermissions(this, permissions, REQUEST_CODE_LOCATION_PERMISSION)
+        }
     }
 
     private fun detectLocation() {
@@ -78,7 +82,9 @@ class MainActivity : DaggerActivity() {
     }
 
     fun refresh(v: View) {
-        if (isNetworkConnected()) init()
+        if (isNetworkConnected()) {
+           requestPermission()
+        }
     }
 
     private fun init() {

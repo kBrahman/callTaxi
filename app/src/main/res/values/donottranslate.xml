@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Taxor</string>
+    <string name="app_name">callTaxi</string>
     <string name="action_update">update</string>
     <string name="app_id">ca-app-pub-8761730220693010~4403272845</string>
     <string name="banner_id">ca-app-pub-8761730220693010/2132332721</string>

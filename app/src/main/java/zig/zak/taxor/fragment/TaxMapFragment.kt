@@ -2,10 +2,16 @@ package zig.zak.taxor.fragment
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.Canvas
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.SupportMapFragment
@@ -55,6 +61,16 @@ class TaxMapFragment : SupportMapFragment(), HasAndroidInjector {
         super.onViewCreated(view, savedInstanceState)
     }
 
+    private fun getBitmapFromVectorDrawable(context: Context?, drawableId: Int): Bitmap? {
+        val drawable = ContextCompat.getDrawable(context!!, drawableId)
+        val bitmap = Bitmap.createBitmap(96,
+                96, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        drawable?.setBounds(0, 0, 96, 96)
+        drawable?.draw(canvas)
+        return bitmap
+    }
+
     private fun listTaxists(map: GoogleMap) {
         Log.i(TAG, "map is ready")
         val list = arguments?.getParcelableArrayList<Taxist>("data")
@@ -64,7 +80,7 @@ class TaxMapFragment : SupportMapFragment(), HasAndroidInjector {
         Log.i(TAG, "lat=>$lat")
         Log.i(TAG, "lon=>$lon")
         val options = MarkerOptions().icon(BitmapDescriptorFactory
-                .fromResource(R.drawable.map_car))
+                .fromBitmap(getBitmapFromVectorDrawable(activity,R.mipmap.ic_launcher_round)))
         map.clear()
         map.setInfoWindowAdapter(TaxiInfoWindowAdapter(context))
         list?.forEach {
