@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="who_are_you">Сіз кімсіз?</string>
+    <string name="taxi_driver">Жүргізуші</string>
+    <string name="passenger">Жолаушы</string>
+    <string name="name">Атыңыз</string>
+    <string name="enter_your_name">Атыңызды енгізіңіз</string>
+    <string name="start">Бастау</string>
+    <string name="phone">Телефоныңыз</string>
+    <string name="enter_your_phone">Телефон нөмірін жазыңыз</string>
+    <string name="working">Жұмыстамын...</string>
+    <string name="rest">Демалу</string>
+    <string name="cant_be_empty">Міндетті түрде жазу керек</string>
+    <string name="try_later">Деректеріңізді жіберу мүмкін болмады, кейінірек қайталап көріңіз</string>
+    <string name="waiting_for_orders">Тапсырыс қоңырауларды күтемін</string>
+    <string name="maintenance">Техникалық жұмыстар жүріп жатыр, кейінірек қайталап көріңіз</string>
+    <string name="network_error">Интернет дұрыс жасамай жатыр</string>
+    <string name="network_not_available">Интернет жоқ</string>
+    <string name="refresh">Жаңарту</string>
+    <string name="closest">"Ең жақын "</string>
+    <string name="taxists">Жүргізушілер</string>
+    <string name="on_map">картада</string>
+    <string name="detection">Сіздің орналасқан жеріңізді анықтап жатырмыз</string>
+    <string name="need_loc_perm">"Бұл қосымшаны орналасқан жер туралы рұқсатсыз пайдалана алмайсыз "</string>
+    <string name="grant_permission">"Рұқсат беру "</string>
+    <string name="exit">Шығу</string>
+    <string name="locate">Орналасқан жеріңізді табыңыз</string>
+</resources>

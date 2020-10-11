@@ -44,4 +44,4 @@
 -dontwarn retrofit2.-KotlinExtensions
 -keepattributes SourceFile,LineNumberTable
 -keep class com.example.app.json.** { *; }
--keep public class zig.zak.taxor.model.Taxist
+-keep public class zig.zak.taxi.model.Taxist

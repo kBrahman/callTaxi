@@ -6,12 +6,12 @@
     <string name="enter_your_name">Enter your name</string>
     <string name="start">START!</string>
     <string name="phone">Your phone:</string>
-    <string name="enter_your_phone">Enter your phone</string>
+    <string name="enter_your_phone">Enter your phone number</string>
     <string name="working">Working…</string>
     <string name="rest">Have a rest</string>
     <string name="cant_be_empty">This field can\'t be empty</string>
     <string name="try_later">Couldn\'t send your data, try again later please</string>
-    <string name="waiting_for_orders">Waiting for orders from clients</string>
+    <string name="waiting_for_orders">Waiting for order calls</string>
     <string name="maintenance">Maintenance works on server side, try again later please</string>
     <string name="network_error">Network error</string>
     <string name="network_not_available">No internet connection</string>

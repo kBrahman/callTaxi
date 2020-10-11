@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="zig.zak.taxor">
+    package="zig.zak.taxi">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -16,7 +16,7 @@
     <uses-feature android:name="android.hardware.location.gps" />
 
     <application
-        android:name=".App"
+        android:name="zig.zak.taxi.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -38,21 +38,21 @@
             android:value="@string/KEY" />
 
         <activity
-            android:name=".activity.MapsActivity"
+            android:name="zig.zak.taxi.activity.MapsActivity"
             android:label="@string/locate" />
-        <activity android:name=".activity.MainActivity">
+        <activity android:name="zig.zak.taxi.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.DriverActivity" />
+        <activity android:name="zig.zak.taxi.activity.DriverActivity" />
 
-        <activity android:name=".activity.PassengerActivity" />
+        <activity android:name="zig.zak.taxi.activity.PassengerActivity" />
 
-        <service android:name=".service.TaxiService" />
-        <receiver android:name=".receiver.StopServiceReceiver" />
+        <service android:name="zig.zak.taxi.service.TaxiService" />
+        <receiver android:name="zig.zak.taxi.receiver.StopServiceReceiver" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"

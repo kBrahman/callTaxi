@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">callTaxi</string>
+    <string name="who_are_you">أنت:</string>
+    <string name="taxi_driver">سائق سيارة أجرة</string>
+    <string name="passenger">راكب</string>
+    <string name="name">اسمك:</string>
+    <string name="enter_your_name">أدخل أسمك</string>
+    <string name="start">بداية!</string>
+    <string name="phone">هاتفك:</string>
+    <string name="enter_your_phone">أدخل رقم هاتفك</string>
+    <string name="working">جارٍ العمل…</string>
+    <string name="rest">خذ راحة</string>
+    <string name="cant_be_empty">لا يمكن أن يكون هذا الحقل فارغًا</string>
+    <string name="try_later">تعذر إرسال البيانات الخاصة بك ، حاول مرة أخرى في وقت لاحق من فضلك</string>
+    <string name="waiting_for_orders">في انتظار مكالمات الطلب</string>
+    <string name="maintenance">تعمل الصيانة من جانب الخادم ، حاول مرة أخرى لاحقًا من فضلك</string>
+    <string name="network_error">خطأ في الشبكة</string>
+    <string name="network_not_available">لا يوجد اتصال بالإنترنت</string>
+    <string name="refresh">تحديث</string>
+    <string name="closest">الأقرب</string>
+    <string name="taxists">السائقين</string>
+    <string name="on_map">على الخريطة</string>
+    <string name="detection">الكشف عن موقعك</string>
+    <string name="need_loc_perm">لا يمكنك استخدام هذا التطبيق دون منح إذن الموقع</string>
+    <string name="grant_permission">يعطي الأذن</string>
+    <string name="exit">خروج</string>
+    <string name="locate">اختر مكانك</string>
+</resources>

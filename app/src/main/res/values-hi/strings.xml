@@ -12,7 +12,7 @@
     <string name="rest">"आराम करो "</string>
     <string name="cant_be_empty">"यह क्षेत्र खाली नहीं हो सकता है "</string>
     <string name="try_later">"अपना डेटा नहीं भेज सका, कृपया बाद में पुनः प्रयास करें "</string>
-    <string name="waiting_for_orders">"ग्राहकों से आदेश की प्रतीक्षा कर रहा है "</string>
+    <string name="waiting_for_orders">"आदेश कॉल की प्रतीक्षा की जा रही है "</string>
     <string name="maintenance">"सर्वर पक्ष पर रखरखाव काम करता है, कृपया बाद में पुनः प्रयास करें "</string>
     <string name="network_error">"नेटवर्क त्रुटि "</string>
     <string name="network_not_available">"कोई इंटरनेट कनेक्शन नहीं "</string>
@@ -20,4 +20,9 @@
     <string name="closest">"निकटतम टैक्सी "</string>
     <string name="taxists">ड्राइवर</string>
     <string name="on_map">"मानचित्र पर "</string>
+    <string name="detection">"अपने स्थान का पता लगाना "</string>
+    <string name="need_loc_perm">आप बिना अनुमति के इस ऐप का उपयोग नहीं कर सकते</string>
+    <string name="grant_permission">"अनुदान अनुमति "</string>
+    <string name="exit">बाहर जाएं</string>
+    <string name="locate">अपनी जगह उठाओ</string>
 </resources>
