@@ -22,15 +22,14 @@ class TaxistAdapter(var list: ArrayList<Taxist>?, var latitude: Double?, var lon
     override fun onBindViewHolder(holder: VH, position: Int) {
         val taxist = list?.get(position)
         holder.itemView.name.text = taxist?.name
-        holder.itemView.distance.text = getDistance(taxist?.lat, taxist?.lon)
+        holder.itemView.distance.text = getDistance(taxist?.lat, taxist?.lon, position)
         holder.phone = taxist?.phone.toString()
     }
 
-    private fun getDistance(taxiLat: Double?, taxiLon: Double?): String {
+    private fun getDistance(taxiLat: Double?, taxiLon: Double?, position: Int): String {
         val taxiLoc = Location("")
         taxiLoc.latitude = taxiLat!!
         taxiLoc.longitude = taxiLon!!
-
         val loc = Location("")
         loc.latitude = latitude ?: 0.0
         loc.longitude = longitude ?: 0.0

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">callTaxi</string>
+    <string name="who_are_you">Кто Вы?</string>
+    <string name="taxi_driver">водитель</string>
+    <string name="passenger">пассажир</string>
+    <string name="name">Ваше имя:</string>
+    <string name="enter_your_name">Введите ваше имя</string>
+    <string name="start">РАБОТАТЬ!</string>
+    <string name="phone">Ваш телефон</string>
+    <string name="enter_your_phone">Ваш номер телефона</string>
+    <string name="working">Работаю...</string>
+    <string name="rest">Отдыхать</string>
+    <string name="cant_be_empty">Нужно заполнить</string>
+    <string name="try_later">Не получилось отправить данные, попробуйте еще раз позже</string>
+    <string name="waiting_for_orders">"Жду звонки - заказы "</string>
+    <string name="maintenance">Технические работы, зайдите по позже пожалуйста</string>
+    <string name="network_error">Ошибка сети</string>
+    <string name="network_not_available">Нет интернета</string>
+    <string name="refresh">Обновить</string>
+    <string name="closest">Рядом</string>
+    <string name="taxists">Таксисты</string>
+    <string name="on_map">на карте</string>
+    <string name="detection">Определяем ваше местоположение</string>
+    <string name="need_loc_perm">Без данного разрешения, использовать приложение не получится</string>
+    <string name="grant_permission">Разрешить</string>
+    <string name="exit">Выйти</string>
+    <string name="locate">Укажите ваше местоположение на карте</string>
+</resources>

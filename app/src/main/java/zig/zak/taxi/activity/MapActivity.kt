@@ -12,10 +12,10 @@ import zig.zak.taxi.R
 import zig.zak.taxi.manager.LocationManager
 import javax.inject.Inject
 
-class MapsActivity : DaggerAppCompatActivity(), OnMapReadyCallback {
+class MapActivity : DaggerAppCompatActivity(), OnMapReadyCallback {
 
     companion object {
-        private val TAG = MapsActivity::class.java.simpleName
+        private val TAG = MapActivity::class.java.simpleName
     }
 
     @Inject

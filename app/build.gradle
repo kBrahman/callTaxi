@@ -17,13 +17,13 @@ android {
             keyPassword keystoreProperties['keyPassword']
         }
     }
-    compileSdkVersion 29
+    compileSdkVersion 30
     defaultConfig {
         applicationId "zig.zak.taxor"
         minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 7
-        versionName "1.6"
+        targetSdkVersion 30
+        versionCode 8
+        versionName "1.7"
         resValue "string", "KEY", localProperties["key"]
         buildConfigField "String", "SERVER", localProperties["server"]
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -64,4 +64,5 @@ dependencies {
     implementation 'com.google.dagger:dagger-android-support:2.29.1'
     kapt 'com.google.dagger:dagger-compiler:2.29.1'
     kapt 'com.google.dagger:dagger-android-processor:2.29.1'
+//    implementation 'org.webrtc:google-webrtc:1.0.32006'
 }

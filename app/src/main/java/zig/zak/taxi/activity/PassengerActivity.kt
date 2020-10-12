@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.tasks.OnSuccessListener
 import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_passenger.*
 import retrofit2.Call
@@ -50,7 +49,7 @@ class PassengerActivity : DaggerAppCompatActivity() {
     }
 
     private fun listTaxists() {
-        locationManager.getMyCoords(OnSuccessListener {
+        locationManager.getMyCoords {
             if (it == null) {
                 getTaxists(locationManager.lastKnownLocation!!.latitude, locationManager.lastKnownLocation!!.longitude)
             } else {
@@ -58,7 +57,7 @@ class PassengerActivity : DaggerAppCompatActivity() {
                 locationManager.lastKnownLocation = LatLng(it.latitude, it.longitude)
             }
 
-        })
+        }
     }
 
     private fun getTaxists(latitude: Double, longitude: Double) {

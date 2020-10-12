@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">callTaxi</string>
     <string name="who_are_you">أنت:</string>
     <string name="taxi_driver">سائق سيارة أجرة</string>
     <string name="passenger">راكب</string>

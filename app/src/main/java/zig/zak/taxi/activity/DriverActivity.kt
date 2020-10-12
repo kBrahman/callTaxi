@@ -144,7 +144,6 @@ class DriverActivity : DaggerAppCompatActivity() {
     fun remove(v: View) {
         val phone = taxist?.phone
         val name = taxist?.name
-        Log.i(TAG, "data=>$name, $phone")
         locationManager.stopSendingLocation = true
         phone?.let { apiManager.remove(it) }
         didExit = true

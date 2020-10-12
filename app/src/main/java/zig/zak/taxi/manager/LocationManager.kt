@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.location.Location
 import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.maps.model.LatLng
@@ -25,9 +26,8 @@ class LocationManager @Inject constructor(private val ctx: Context, private val 
     var stopSendingLocation = false
 
     fun sendLocation() {
-        Log.i(TAG, "send location")
         sendCoords()
-        Handler().postDelayed({
+        Handler(Looper.getMainLooper()).postDelayed({
             if (!stopSendingLocation) sendLocation()
         }, 21000)
     }

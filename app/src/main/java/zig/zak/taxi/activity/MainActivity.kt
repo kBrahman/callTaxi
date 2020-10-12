@@ -57,7 +57,7 @@ class MainActivity : DaggerActivity() {
     private fun detectLocation() {
         setContentView(R.layout.activity_main)
         locationManager.detect({
-            startActivityForResult(Intent(this, MapsActivity::class.java), REQUEST_CODE_GET_LOCATION)
+            startActivityForResult(Intent(this, MapActivity::class.java), REQUEST_CODE_GET_LOCATION)
         }, ::init)
     }
 
