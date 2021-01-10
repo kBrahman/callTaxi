@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="zig.zak.taxi">
+    package="z.taxi">
 
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the "MyLocation" functionality.
-    -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <uses-feature android:name="android.hardware.location.gps" />
 
     <application
-        android:name="zig.zak.taxi.App"
+        android:name="z.taxi.App"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -38,21 +33,23 @@
             android:value="@string/KEY" />
 
         <activity
-            android:name="zig.zak.taxi.activity.MapActivity"
+            android:name="z.taxi.activity.MapActivity"
             android:label="@string/locate" />
-        <activity android:name="zig.zak.taxi.activity.MainActivity">
+        <activity
+            android:name="z.taxi.activity.MainActivity"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="zig.zak.taxi.activity.DriverActivity" />
+        <activity android:name="z.taxi.activity.DriverActivity" />
 
-        <activity android:name="zig.zak.taxi.activity.PassengerActivity" />
+        <activity android:name="z.taxi.activity.PassengerActivity" />
 
-        <service android:name="zig.zak.taxi.service.TaxiService" />
-        <receiver android:name="zig.zak.taxi.receiver.StopServiceReceiver" />
+        <service android:name="z.taxi.service.TaxiService" />
+        <receiver android:name="z.taxi.receiver.StopServiceReceiver" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"

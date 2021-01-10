@@ -18,10 +18,21 @@
     <string name="refresh">Refresh</string>
     <string name="closest">Closest</string>
     <string name="taxists">Drivers</string>
-    <string name="on_map">on map</string>
+    <string name="on_map">On map</string>
     <string name="detection">Detecting your location</string>
     <string name="need_loc_perm">You can\'t use this app without location permission granted</string>
     <string name="grant_permission">Grant permission</string>
     <string name="exit">Exit</string>
     <string name="locate">Pick your place</string>
+    <string name="explicit_perm_required">Explicit permission required</string>
+    <string name="need_perm_back">callTaxi needs your explicit permission to send your location from background. Press OK and select <font color="#871144">Allow all the time</font> option</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="client_calling">Client is calling</string>
+    <string name="answer">Answer</string>
+    <string name="reject">Reject</string>
+    <string name="select_mode">Select app usage mode.</string>
+    <string name="sending_loc">(App is sending your location to server each 20 seconds)</string>
+    <string name="profile">profile</string>
+    <string name="save">Save</string>
 </resources>
